@@ -416,5 +416,32 @@ img {
     max-width: 1200px;
     margin: auto;
 }
+/* --- GLOBAL OVERFLOW FIX --- */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Resimleri taşmayacak hale getir */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Mobilde tüm blokların taşmasını engelle */
+.container,
+header,
+section,
+footer,
+div {
+    max-width: 100%;
+}
+
 
 
