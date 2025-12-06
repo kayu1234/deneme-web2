@@ -6,6 +6,35 @@
   <title>Nemrut Dağı — Adıyaman Tarihi</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
+
+  <style>
+    /* --- Mobil uyumlu düzen --- */
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 30px;
+      align-items: start;
+    }
+
+    /* Sağdaki kutuyu mobilde alta al */
+    @media (max-width: 900px) {
+      .detail-grid {
+        grid-template-columns: 1fr;
+      }
+      aside {
+        order: 99;
+        width: 100% !important;
+      }
+    }
+
+    /* Pratik bilgiler taşma düzeltme */
+    .no-overflow {
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      word-break: break-word;
+    }
+  </style>
 </head>
 
 <body>
@@ -49,10 +78,11 @@
     </p>
   </section>
 
-  <section style="display:grid; grid-template-columns: 1fr 360px; gap:30px; align-items:start;">
+  <!-- Yeni düzenli grid -->
+  <section class="detail-grid">
 
     <!-- Sol içerik -->
-    <div>
+    <div class="no-overflow">
       <article>
         <h3 style="color:#0f2c4c;">Tarihçe</h3>
         <p style="color:#333; line-height:1.6;">
@@ -108,8 +138,8 @@
       </article>
     </div>
 
-    <!-- Sağ sütun -->
-    <aside style="background:#fff; border-radius:12px; padding:18px; box-shadow:0 8px 20px rgba(0,0,0,0.06);">
+    <!-- Sağ kolon — Artık sadece alta inecek kutu -->
+    <aside style="background:#fff; border-radius:12px; padding:18px; box-shadow:0 8px 20px rgba(0,0,0,0.06); width:100%;">
       <h4 style="margin-top:0; color:#0f2c4c;">Hızlı Bilgiler</h4>
       <p><strong>En iyi zaman:</strong> İlkbahar & sonbahar.</p>
       <p><strong>İhtiyaç:</strong> Su, yürüyüş ayakkabısı.</p>
@@ -128,4 +158,3 @@
 
 </body>
 </html>
-
