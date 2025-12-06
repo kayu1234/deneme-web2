@@ -443,5 +443,12 @@ div {
     max-width: 100%;
 }
 
+ul, li {
+    display: block !important;
+    position: relative !important;
+    line-height: 1.6 !important;
+    margin-bottom: 6px !important;
+}
+
 
 
