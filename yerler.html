@@ -6,83 +6,72 @@
     <title>Gezilecek Yerler – Adıyaman</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
+<body>
+
+<!-- ÜSTTE GÖRÜNEN MESAJ -->
 <div class="site-info" id="school-message">
     Bu site, Kahta Anadolu Lisesi öğrencileri tarafından yapılmıştır.
     <span class="close-msg" id="close-message">&times;</span>
 </div>
 
-<!-- Gizli duran ok ikonu -->
+<!-- TEKRAR AÇMA OKU -->
 <div class="reopen-arrow" id="reopen-arrow">&#9650;</div>
 
-<body>
+<!-- HEADER -->
+<header>
+    <div class="container">
+        <h1>Adıyaman Gezi Rehberi</h1>
 
-    <!-- HEADER -->
-    <header>
-        <div class="container">
-            <h1>Adıyaman Gezi Rehberi</h1>
+        <button id="mobile-menu" class="menu-toggle">☰</button>
 
-            <button id="mobile-menu" class="menu-toggle">☰</button>
+        <nav id="navbar">
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="yerler.html" class="active">Gezilecek Yerler</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+                <li><a href="proje.html">Projeler</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-            <nav id="navbar">
-                <ul>
-                    <li><a href="index.html">Ana Sayfa</a></li>
-                    <li><a href="yerler.html" class="active">Gezilecek Yerler</a></li>
-                    <li><a href="iletisim.html">İletişim</a></li>
-                     <li><a href="proje.html">Projeler</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<!-- ANA İÇERİK -->
+<main class="container" style="margin-top: 50px; margin-bottom: 50px;">
 
+    <h2 style="text-align:center; color:#0f2c4c; margin-bottom:40px;">
+        Adıyaman’da Gezilecek Yerler
+    </h2>
 
-    <!-- MAIN CONTENT -->
-    <main class="container" style="margin-top: 50px; margin-bottom: 50px;">
+    <section class="featured">
+        <div class="cards">
 
-        <h2 style="text-align:center; color:#0f2c4c; margin-bottom:40px;">
-            Adıyaman’da Gezilecek Yerler
-        </h2>
-
-        <!-- KARTLAR BAŞLIYOR -->
-        <section class="featured">
-
-            <div class="cards">
-
-                <!-- NEMRUT KARTI -->
-                <div class="card">
-                    <img src="images/nemrut.jpg" alt="Nemrut Dağı">
-                    <h3>Nemrut Dağı</h3>
-                    <p>Kommagene Krallığı'nın anıtsal mezar kompleksi, dev tanrı heykelleri ve eşsiz gün doğumu manzarası.</p>
-                    <a href="nemrut.html" class="btn-card">Detayları Gör</a>
-                </div>
-
-                <!-- CENDERE KÖPRÜSÜ KARTI -->
-                <div class="card">
-                    <img src="images/cendere.jpg" alt="Cendere Köprüsü">
-                    <h3>Cendere Köprüsü</h3>
-                    <p>Roma dönemine uzanan tarihi taş köprü. Mühendislik harikası kemerli yapısıyla ünlüdür.</p>
-                    <a href="cendere.html" class="btn-card">Detayları Gör</a>
-                </div>
-
+            <!-- NEMRUT -->
+            <div class="card">
+                <img src="images/nemrut.jpg" alt="Nemrut Dağı">
+                <h3>Nemrut Dağı</h3>
+                <p>Kommagene Krallığı'nın anıtsal mezar kompleksi, dev tanrı heykelleri ve eşsiz gün doğumu manzarası.</p>
+                <a href="nemrut.html" class="btn-card">Detayları Gör</a>
             </div>
-        </section>
-        <!-- KARTLAR BİTİYOR -->
 
-    </main>
+            <!-- CENDERE -->
+            <div class="card">
+                <img src="images/cendere.jpg" alt="Cendere Köprüsü">
+                <h3>Cendere Köprüsü</h3>
+                <p>Roma dönemine uzanan tarihi taş köprü. Mühendislik harikası kemerli yapısıyla ünlüdür.</p>
+                <a href="cendere.html" class="btn-card">Detayları Gör</a>
+            </div>
 
+        </div>
+    </section>
 
-    <!-- FOOTER -->
-    <footer style="background:#0f2c4c; color:white; padding:20px 0; text-align:center;">
-        <p>© 2025 Adıyaman Gezi Rehberi</p>
-    </footer>
+</main>
 
+<!-- FOOTER -->
+<footer style="background:#0f2c4c; color:white; padding:20px 0; text-align:center;">
+    <p>© 2025 Adıyaman Gezi Rehberi</p>
+</footer>
 
-    <script src="script.js"></script>
-    <div class="site-info" id="school-message">
-    Bu site, Kahta Anadolu Lisesi öğrencileri tarafından yapılmıştır.
-    <span class="close-msg" id="close-message">×</span>
-</div>
-
-<div class="reopen-arrow" id="reopen-arrow">▲</div>
-
+<script src="script.js"></script>
 </body>
 </html>
