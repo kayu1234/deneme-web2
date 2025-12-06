@@ -449,6 +449,23 @@ ul, li {
     line-height: 1.6 !important;
     margin-bottom: 6px !important;
 }
+/* Mobil navbar kapalı iken */
+#navbar {
+    display: none;
+}
+
+/* Açıldığında */
+#navbar.active {
+    display: block;
+}
+
+/* Masaüstünde normal görünmesi */
+@media (min-width: 768px) {
+    #navbar {
+        display: block !important;
+    }
+}
+
 
 
 
