@@ -1,19 +1,53 @@
-/* Genel Ayarlar */
-body {
+/* ----------------------------- */
+/* GENEL AYARLAR */
+/* ----------------------------- */
+
+* {
+  box-sizing: border-box;
+  }
+
+html, body {
 margin: 0;
+padding: 0;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 background-color: #f4f7fa;
-color: #1c1c1c;
+color: #1c1c1c; /* Genel metin rengi */
+overflow-x: hidden;
+width: 100%;
 }
 
-/* Container */
+h1, h2, h3, h4, h5, h6 {
+color: #0f2c4c; /* Başlık rengi */
+margin: 0 0 15px 0;
+}
+
+p, li {
+color: #1c1c1c; /* Paragraf ve liste metni */
+line-height: 1.7;
+}
+
+a {
+color: #0f2c4c; /* Link rengi */
+text-decoration: none;
+transition: color 0.3s;
+}
+
+a:hover, a.active {
+color: #f78c42;
+}
+
+/* ----------------------------- */
+/* CONTAINER */
+/* ----------------------------- */
 .container {
 width: 90%;
 max-width: 1200px;
 margin: auto;
 }
 
-/* Header */
+/* ----------------------------- */
+/* HEADER & NAVBAR */
+/* ----------------------------- */
 header {
 background-color: #0f2c4c;
 color: white;
@@ -24,7 +58,6 @@ z-index: 1000;
 }
 
 header h1 {
-margin: 0;
 text-align: center;
 font-size: 2em;
 }
@@ -43,59 +76,25 @@ margin: 0 15px;
 
 nav ul li a {
 color: white;
-text-decoration: none;
 font-weight: bold;
-transition: color 0.3s;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
-color: #f78c42;
-}
-
-/* Mobile Menu */
 .menu-toggle {
 display: none;
-background: none;
-border: none;
-font-size: 2em;
-color: white;
-cursor: pointer;
-position: absolute;
-top: 15px;
-right: 20px;
 }
 
-@media (max-width: 768px) {
-nav ul {
-flex-direction: column;
-display: none;
-background-color: #0f2c4c;
-width: 100%;
-text-align: center;
-margin-top: 10px;
-}
-nav ul li {
-margin: 10px 0;
-}
-.menu-toggle {
-display: block;
-}
-nav.active ul {
-display: flex;
-}
-}
-
-/* Hero Section */
+/* ----------------------------- */
+/* HERO SEKTÖRÜ */
+/* ----------------------------- */
 .hero {
 background: linear-gradient(rgba(15,44,76,0.6), rgba(15,44,76,0.6)), url('images/nemrut.jpg') center/cover no-repeat;
 color: white;
 text-align: center;
 padding: 150px 20px 100px 20px;
 display: flex;
+flex-direction: column;
 align-items: center;
 justify-content: center;
-flex-direction: column;
 }
 
 .hero h2 {
@@ -105,32 +104,14 @@ margin-bottom: 20px;
 
 .hero p {
 font-size: 1.2em;
-margin-bottom: 30px;
 max-width: 700px;
 line-height: 1.5;
+margin-bottom: 30px;
 }
 
-.btn {
-background-color: #f78c42;
-color: white;
-padding: 15px 30px;
-border-radius: 30px;
-text-decoration: none;
-font-weight: bold;
-transition: background 0.3s;
-}
-
-.btn:hover {
-background-color: #e06f1a;
-}
-
-/* Featured Cards */
-.featured h2 {
-text-align: center;
-margin-bottom: 40px;
-color: #0f2c4c;
-}
-
+/* ----------------------------- */
+/* KARTLAR */
+/* ----------------------------- */
 .cards {
 display: flex;
 gap: 30px;
@@ -144,8 +125,8 @@ border-radius: 15px;
 overflow: hidden;
 width: 300px;
 box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-transition: transform 0.3s, box-shadow 0.3s;
 text-align: center;
+transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
@@ -160,32 +141,35 @@ object-fit: cover;
 }
 
 .card h3 {
-margin: 15px 0;
 color: #0f2c4c;
+margin: 15px 0;
 }
 
 .card p {
+color: #1c1c1c;
 padding: 0 15px 15px 15px;
-font-size: 0.95em;
-color: #333;
 }
 
-.btn-card {
-display: inline-block;
-margin-bottom: 20px;
-padding: 10px 25px;
+/* ----------------------------- */
+/* BUTONLAR */
+/* ----------------------------- */
+.btn, .btn-card {
 background-color: #f78c42;
 color: white;
+padding: 10px 25px;
 border-radius: 25px;
 text-decoration: none;
+font-weight: bold;
 transition: background 0.3s;
 }
 
-.btn-card:hover {
+.btn:hover, .btn-card:hover {
 background-color: #e06f1a;
 }
 
-/* Footer */
+/* ----------------------------- */
+/* FOOTER */
+/* ----------------------------- */
 footer {
 background-color: #0f2c4c;
 color: white;
@@ -193,295 +177,112 @@ text-align: center;
 padding: 20px 0;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-.cards {
-flex-direction: column;
-align-items: center;
+/* ----------------------------- */
+/* MESAJ & OK BUTONLARI */
+/* ----------------------------- */
+.site-info {
+position: fixed;
+bottom: 0;
+left: 0;
+width: 100%;
+background: #111;
+color: #fff;
+text-align: center;
+padding: 10px 40px 10px 10px;
+font-size: 14px;
+z-index: 99999;
+backdrop-filter: blur(4px);
 }
 
+.close-msg {
+position: absolute;
+right: 15px;
+top: 50%;
+transform: translateY(-50%);
+font-size: 22px;
+cursor: pointer;
+color: #fff;
+font-weight: bold;
+user-select: none;
+}
+
+.reopen-arrow {
+position: fixed;
+bottom: 10px;
+right: 20px;
+background: #111;
+color: #fff;
+padding: 6px 10px;
+border-radius: 6px;
+cursor: pointer;
+display: none;
+opacity: 0.6;
+z-index: 99999;
+}
+
+/* ----------------------------- */
+/* RESPONSIVE / MOBİL */
+/* ----------------------------- */
+@media (max-width: 768px) {
+
 ```
+header .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+nav ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    display: none;
+}
+
+nav.active ul {
+    display: flex;
+}
+
+.hero {
+    padding: 60px 20px;
+}
+
 .hero h2 {
-    font-size: 2em;
+    font-size: 28px;
 }
 
 .hero p {
-    font-size: 1em;
+    font-size: 16px;
+}
+
+.cards {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+.site-info {
+    font-size: 12px;
+    padding: 8px;
+}
+
+.reopen-arrow {
+    right: 10px;
+    bottom: 10px;
 }
 ```
 
 }
-.map-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #2b74ff;
-    color: #fff;
-    padding: 12px 20px;
-    border-radius: 10px;
-    font-size: 15px;
-    text-decoration: none;
-    font-weight: 600;
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
-    transition: 0.25s ease;
-    z-index: 999;
-}
-
-.map-btn:hover {
-    background: #1a5de1;
-    transform: translateY(-3px);
-}
-.site-info {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: #111;
-    color: #fff;
-    text-align: center;
-    padding: 8px 0;
-    font-size: 14px;
-    opacity: 0.85;
-    z-index: 9999;
-    backdrop-filter: blur(4px);
-}
-/* Ana mesaj */
-.site-info {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: #111;
-    color: #fff;
-    text-align: center;
-    padding: 10px 40px 10px 10px;
-    font-size: 14px;
-    opacity: 0.95;
-    z-index: 9999;
-    backdrop-filter: blur(4px);
-}
-
-/* Çarpı işareti */
-.close-msg {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 20px;
-    cursor: pointer;
-    color: #ddd;
-    transition: 0.3s;
-}
-
-.close-msg:hover {
-    color: #ff5f5f;
-}
-
-/* Küçük ok ikonu (başta gizli) */
-.reopen-arrow {
-    position: fixed;
-    bottom: 10px;
-    right: 20px;
-    background: #111;
-    color: #fff;
-    padding: 6px 10px;
-    border-radius: 6px;
-    cursor: pointer;
-    display: none;   /* Mesaj açıkken görünmez */
-    opacity: 0.5;    /* Rahatsız etmesin */
-    transition: opacity 0.3s;
-    font-size: 16px;
-    z-index: 9999;
-}
-
-.reopen-arrow:hover {
-    opacity: 0.9;
-}
-.site-info {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: #111;
-    color: #fff;
-    text-align: center;
-    padding: 10px 40px 10px 10px;
-    font-size: 14px;
-    z-index: 99999;
-}
-
-.close-msg {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 22px;
-    cursor: pointer;
-    color: #fff;
-    font-weight: bold;
-    user-select: none;
-}
-
-.reopen-arrow {
-    position: fixed;
-    bottom: 10px;
-    right: 20px;
-    background: #111;
-    color: #fff;
-    padding: 6px 10px;
-    border-radius: 6px;
-    cursor: pointer;
-    display: none;
-    opacity: 0.6;
-    z-index: 99999;
-}
-/* --------------------------- */
-/* MOBİL DÜZENLEMELER - GENEL */
-/* --------------------------- */
-@media (max-width: 768px) {
-
-    /* Başlık ve menü */
-    header .header-container {
-        flex-direction: column;
-        align-items: flex-start;
-        text-align: left;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-    }
-
-    nav ul li a {
-        padding: 12px 0;
-        display: block;
-        width: 100%;
-    }
-
-    /* Hero alanı */
-    .hero {
-        padding: 60px 20px;
-        text-align: center;
-    }
-
-    .hero h2 {
-        font-size: 28px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    /* Kartlar */
-    .cards {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .card {
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .card img {
-        width: 100%;
-        height: auto;
-    }
-
-    /* Footer */
-    footer p {
-        font-size: 14px;
-        text-align: center;
-    }
-
-    /* Ok-kapat butonları */
-    .site-info {
-        font-size: 12px;
-        padding: 8px;
-    }
-
-    .reopen-arrow {
-        right: 10px;
-        bottom: 10px;
-    }
-}
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
-/* --- GLOBAL OVERFLOW FIX --- */
-* {
-    box-sizing: border-box;
-}
-
-html, body {
-    overflow-x: hidden;
-    width: 100%;
-    max-width: 100%;
-}
-
-/* Resimleri taşmayacak hale getir */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Mobilde tüm blokların taşmasını engelle */
-.container,
-header,
-section,
-footer,
-div {
-    max-width: 100%;
-}
-
-ul, li {
-    display: block !important;
-    position: relative !important;
-    line-height: 1.6 !important;
-    margin-bottom: 6px !important;
-}
-/* Mobil navbar kapalı iken */
-#navbar {
-    display: none;
-}
-
-/* Açıldığında */
-#navbar.active {
-    display: block;
-}
-
-/* Masaüstünde normal görünmesi */
-@media (min-width: 768px) {
-    #navbar {
-        display: block !important;
-    }
-}
-/* Mobilde detay sayfası sütunlarını tek kolona çevir */
-@media (max-width: 768px) {
-    .detail-grid,
-    main section[style*="grid-template-columns"] {
-        display: block !important;
-    }
-
-    aside {
-        margin-top: 25px !important;
-        width: 100% !important;
-    }
-}
-
-
-
-
-
-
-
-
