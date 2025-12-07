@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Adıyaman AI</title>
+
+<style>
+  #chat-container {
+    width: 350px;
+    height: 500px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    background: #ffffffaa;
+    backdrop-filter: blur(5px);
+    font-family: Arial;
+  }
+  #chat-box {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+  }
+  #chat-input-area {
+    display: flex;
+    gap: 5px;
+  }
+  #user-input {
+    flex: 1;
+    padding: 8px;
+  }
+  .user-msg {
+    background: #c7eaff;
+    padding: 8px;
+    border-radius: 8px;
+    margin: 5px 0;
+    text-align: right;
+  }
+  .bot-msg {
+    background: #eee;
+    padding: 8px;
+    border-radius: 8px;
+    margin: 5px 0;
+    text-align: left;
+  }
+</style>
+</head>
+
+<body>
+
+<div id="chat-container">
+  <div id="chat-box"></div>
+
+  <div id="chat-input-area">
+    <input id="user-input" placeholder="Sor bir şey...">
+    <button id="send-btn">Gönder</button>
+  </div>
+</div>
+
+<script>
+const API_KEY = AIzaSyC-J6QhSnjPFwJw18OBaOHz21PTmQuRMQc;
+
+async function sendToGemini(prompt) {
+  const response = await fetch(
+    "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=" + API_KEY,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        contents: [{ role: "user", parts: [{ text: prompt }] }]
+      })
+    }
+  );
+  const data = await response.json();
+  return data.candidates[0].content.parts[0].text;
+}
+
+document.getElementById("send-btn").addEventListener("click", async () => {
+  const inp = document.getElementById("user-input");
+  const text = inp.value.trim();
+  if (!text) return;
+  addMessage("user", text);
+  inp.value = "";
+
+  const reply = await sendToGemini(text);
+  addMessage("bot", reply);
+});
+
+function addMessage(sender, text) {
+  const box = document.getElementById("chat-box");
+  const msg = document.createElement("div");
+  msg.className = sender === "user" ? "user-msg" : "bot-msg";
+  msg.innerText = text;
+  box.appendChild(msg);
+  box.scrollTop = box.scrollHeight;
+}
+</script>
+
+</body>
+</html>
