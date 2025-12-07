@@ -3,7 +3,7 @@ body {
 margin: 0;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 background-color: #f4f7fa;
-color: #FFFFFF;
+color: #f4f7fa;
 }
 
 /* Container */
@@ -477,6 +477,7 @@ ul, li {
         width: 100% !important;
     }
 }
+
 
 
 
