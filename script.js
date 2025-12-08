@@ -1,69 +1,43 @@
+// Basit, güvenli ve okunaklı script
 document.addEventListener('DOMContentLoaded', () => {
-// Mobile menu toggle
-const menuToggle = document.getElementById('mobile-menu');
-const navbar = document.getElementById('navbar');
+  // Mobile menu toggle
+  const mobileToggle = document.getElementById('mobile-toggle');
+  const mainNav = document.getElementById('main-nav');
 
-```
-menuToggle.addEventListener('click', () => {
-    navbar.classList.toggle('active');
+  mobileToggle.addEventListener('click', () => {
+    mainNav.classList.toggle('active');
+    mobileToggle.setAttribute('aria-expanded', mainNav.classList.contains('active'));
+  });
+
+  // Site info close / reopen behavior
+  const siteInfo = document.getElementById('site-info');
+  const closeSiteInfo = document.getElementById('close-site-info');
+  const reopenArrow = document.getElementById('reopen-arrow');
+
+  closeSiteInfo.addEventListener('click', () => {
+    siteInfo.style.display = 'none';
+    reopenArrow.style.display = 'block';
+  });
+
+  reopenArrow.addEventListener('click', () => {
+    siteInfo.style.display = 'flex';
+    reopenArrow.style.display = 'none';
+  });
+
+  // Close mobile nav when clicking a link (better UX)
+  mainNav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      if (mainNav.classList.contains('active')) {
+        mainNav.classList.remove('active');
+      }
+    });
+  });
+
+  // Accessibility: close mobile nav by pressing Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      if (mainNav.classList.contains('active')) mainNav.classList.remove('active');
+      if (siteInfo && siteInfo.style.display === 'flex') { /* no-op */ }
+    }
+  });
 });
-
-// Toggle place detail
-const titles = document.querySelectorAll('.place-title');
-
-titles.forEach(title => {
-    title.addEventListener('click', () => {
-        const targetId = title.dataset.target;
-        const detail = document.getElementById(targetId);
-        detail.classList.toggle('open');
-    });
-});
-```
-
-});
-document.addEventListener('DOMContentLoaded', () => {
-
-    const message = document.getElementById('school-message');
-    const closeBtn = document.getElementById('close-message');
-    const arrow = document.getElementById('reopen-arrow');
-
-    // Mesajı kapatma
-    closeBtn.addEventListener('click', () => {
-        message.style.display = 'none';
-        arrow.style.display = 'block';
-    });
-
-    // Mesajı tekrar açma
-    arrow.addEventListener('click', () => {
-        message.style.display = 'block';
-        arrow.style.display = 'none';
-    });
-
-});
-document.addEventListener('DOMContentLoaded', () => {
-
-    const message = document.getElementById('school-message');
-    const closeBtn = document.getElementById('close-message');
-    const arrow = document.getElementById('reopen-arrow');
-
-    closeBtn.addEventListener('click', () => {
-        message.style.display = 'none';
-        arrow.style.display = 'block';
-    });
-
-    arrow.addEventListener('click', () => {
-        message.style.display = 'block';
-        arrow.style.display = 'none';
-    });
-
-});
-// MOBIL MENU
-const mobileMenu = document.getElementById("mobile-menu");
-const navbar = document.getElementById("navbar");
-
-if (mobileMenu) {
-    mobileMenu.addEventListener("click", () => {
-        navbar.classList.toggle("active");
-    });
-}
-
