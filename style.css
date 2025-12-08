@@ -25,20 +25,40 @@ html,body{ height:100%; margin:0; font-family: 'Segoe UI', Tahoma, Geneva, Verda
 .brand .brand-text { font-weight:700; font-size:1.05rem; color:var(--white); text-decoration:none; }
 .logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
 
-/* NAV */
-.main-nav a {
-  color: var(--white);
-  text-decoration: none;
-  font-weight: 600;
-  padding: 10px 14px;
-  border-radius: 8px;
-  transition: 0.25s ease;
+/* NAVBAR GENEL */
+nav {
+    background: #0f2c4c;
+    padding: 12px 0;
+    border-radius: 8px;
+    margin-top: 10px;
 }
 
-.main-nav a:hover,
-.main-nav a.active {
-  background: rgba(255,255,255,0.12);
-  color: var(--orange);
+/* Listeyi yatay yap */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+/* Görünümü butonlaştır */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 16px;
+    background: rgba(255,255,255,0.10);
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.25s ease;
+}
+
+/* Hover efekti */
+nav ul li a:hover,
+nav ul li a.active {
+    background: #f78c42;
+    color: #fff;
 }
 
 
@@ -121,6 +141,7 @@ html,body{ height:100%; margin:0; font-family: 'Segoe UI', Tahoma, Geneva, Verda
   .card{ width:100%; }
   .reopen-arrow{ display:block; }
 }
+
 
 
 
