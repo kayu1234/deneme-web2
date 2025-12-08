@@ -49,67 +49,55 @@
             background-color: #e06f1a;
         }
 
-        /* Alt mesaj */
         .info {
             text-align: center;
             margin-top: 15px;
         }
-
-      
-
+    </style>
+</head>
 <body>
 
+<header>
+    <h1>Adıyaman Gezi Rehberi</h1>
 
-   <header>
-  <h1>Adıyaman Gezi Rehberi</h1>
+    <button class="menu-toggle">☰</button>
 
-  <button class="menu-toggle">☰</button>
-
-  <nav id="navbar">
-    <ul>
-      <li><a href="index.html">Ana Sayfa</a></li>
-      <li><a href="yerler.html">Gezilecek Yerler</a></li>
-      <li><a href="iletisim.html">İletişim</a></li>
-      <li><a href="projeler.html">Projeler</a></li>
-    </ul>
-  </nav>
+    <nav id="navbar">
+      <ul>
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="yerler.html">Gezilecek Yerler</a></li>
+        <li><a href="iletisim.html" class="active">İletişim</a></li>
+        <li><a href="projeler.html">Projeler</a></li>
+      </ul>
+    </nav>
 </header>
 
-    <!-- İletişim Formu -->
-    <section class="contact container">
-        <h2>İletişim</h2>
-        <p style="text-align:center">Aşağıdaki form üzerinden bize mesaj gönderebilirsiniz.</p>
+<section class="contact container">
+    <h2>İletişim</h2>
+    <p style="text-align:center">Aşağıdaki form üzerinden bize mesaj gönderebilirsiniz.</p>
 
-        <!-- ÇALIŞAN FORM! BURASI ÖNEMLİ -->
-        <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+    <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
 
-            <!-- BURAYA KENDİ KEY’İNİ YAZ -->
-            <input type="hidden" name="access_key" value="670b8b87-4ae7-4744-b7cb-8c970ad49124">
+        <!-- Web3Forms access key -->
+        <input type="hidden" name="access_key" value="670b8b87-4ae7-4744-b7cb-8c970ad49124">
 
-            <label for="name">Adınız:</label>
-            <input type="text" id="name" name="name" required placeholder="Adınız">
+        <label for="name">Adınız:</label>
+        <input type="text" id="name" name="name" required placeholder="Adınız">
 
-            <label for="email">E-posta:</label>
-            <input type="email" id="email" name="email" required placeholder="E-posta adresiniz">
+        <label for="email">E-posta:</label>
+        <input type="email" id="email" name="email" required placeholder="E-posta adresiniz">
 
-            <label for="message">Mesajınız:</label>
-            <textarea id="message" name="message" required placeholder="Mesajınızı yazın..." rows="5"></textarea>
+        <label for="message">Mesajınız:</label>
+        <textarea id="message" name="message" required placeholder="Mesajınızı yazın..." rows="5"></textarea>
 
-            <button type="submit">Gönder</button>
-        </form>
+        <button type="submit">Gönder</button>
+    </form>
 
-        <p class="info">Alternatif olarak e-posta gönderebilirsiniz:  
-            <a href="mailto:kaltarihproje@gmail.com">kaltarihproje@gmail.com</a>
-        </p>
-    </section>
-
- 
-    
+    <p class="info">
+        Alternatif olarak e-posta gönderebilirsiniz:
+        <a href="mailto:kaltarihproje@gmail.com">kaltarihproje@gmail.com</a>
+    </p>
+</section>
 
 </body>
 </html>
-
-
-
-
-
