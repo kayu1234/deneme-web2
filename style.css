@@ -79,7 +79,6 @@ html,body{ height:100%; margin:0; font-family: 'Segoe UI', Tahoma, Geneva, Verda
 /* ----------------------------
    MAP BTN + SITE INFO
    ---------------------------- */
-.map-btn { position:fixed; right:18px; bottom:18px; background:#2b74ff; color:#fff; padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:700; box-shadow:0 8px 20px rgba(43,116,255,0.14); z-index:120; }
 .site-info { position:fixed; bottom:0; left:0; width:100%; background:rgba(15,44,76,0.95); color:#fff; padding:12px 18px; z-index:119; display:flex; justify-content:center; align-items:center; }
 .site-info-inner { max-width:var(--container); width:90%; margin:0 auto; display:flex; justify-content:space-between; align-items:center; gap:12px; }
 .close-site-info { background:transparent; border:none; color:#fff; font-size:20px; cursor:pointer; }
@@ -110,3 +109,4 @@ html,body{ height:100%; margin:0; font-family: 'Segoe UI', Tahoma, Geneva, Verda
   .card{ width:100%; }
   .reopen-arrow{ display:block; }
 }
+
