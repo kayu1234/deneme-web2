@@ -4,91 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>İletişim - Adıyaman Tarihi</title>
+
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 
     <style>
-        /* İletişim sayfası için mini stiller */
+        /* Yeni modern iletişim sayfası düzeni */
+
         .contact {
-            padding: 40px 20px;
+            padding: 60px 0;
+            max-width: 700px;
+            margin: 0 auto;
         }
 
         .contact h2 {
             text-align: center;
-            margin-bottom: 20px;
-            color: #0f2c4c;
+            color: var(--navy);
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .contact p {
+            text-align: center;
+            color: var(--muted);
+            max-width: 480px;
+            margin: 0 auto 30px auto;
         }
 
         .contact form {
-            max-width: 600px;
-            margin: auto;
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 18px;
+            background: white;
+            padding: 30px 25px;
+            border-radius: 14px;
+            box-shadow: var(--card-shadow);
         }
 
-        .contact input, .contact textarea {
-            padding: 12px;
-            font-size: 1em;
-            border: 1px solid #bbb;
-            border-radius: 8px;
+        .contact label {
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        .contact input,
+        .contact textarea {
+            padding: 14px;
+            font-size: 1rem;
+            border: 1px solid #d1d5db;
+            border-radius: 10px;
+            background: #f9fafb;
+            transition: border 0.2s, background 0.2s;
+        }
+
+        .contact input:focus,
+        .contact textarea:focus {
+            outline: none;
+            border-color: var(--orange);
+            background: #fff;
         }
 
         .contact button {
-            padding: 12px;
-            font-size: 1.1em;
-            background-color: #f78c42;
+            background: var(--orange);
             color: white;
+            padding: 14px;
             border: none;
-            border-radius: 8px;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 700;
             cursor: pointer;
-            transition: background 0.3s;
+            transition: 0.25s ease;
         }
 
         .contact button:hover {
-            background-color: #e06f1a;
+            background: #e06f1a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(247,140,66,0.25);
         }
 
         .info {
             text-align: center;
-            margin-top: 15px;
+            margin-top: 20px;
+            color: var(--muted);
+        }
+
+        .info a {
+            color: var(--orange);
+            font-weight: 600;
         }
     </style>
 </head>
+
 <body>
 
-<header>
-    <h1>Adıyaman Gezi Rehberi</h1>
+<header class="site-header">
+    <div class="header-inner container">
+        <a href="index.html" class="brand-text" style="color:white; font-size:1.2rem; font-weight:700;">
+            Adıyaman Gezi Rehberi
+        </a>
 
-    <button class="menu-toggle">☰</button>
+        <button class="mobile-toggle">☰</button>
 
-    <nav id="navbar">
-      <ul>
-        <li><a href="index.html">Ana Sayfa</a></li>
-        <li><a href="yerler.html">Gezilecek Yerler</a></li>
-        <li><a href="iletisim.html" class="active">İletişim</a></li>
-        <li><a href="projeler.html">Projeler</a></li>
-      </ul>
-    </nav>
+        <nav class="main-nav" id="navbar">
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="yerler.html">Gezilecek Yerler</a></li>
+                <li><a href="iletisim.html" class="active">İletişim</a></li>
+                <li><a href="projeler.html">Projeler</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <section class="contact container">
     <h2>İletişim</h2>
-    <p style="text-align:center">Aşağıdaki form üzerinden bize mesaj gönderebilirsiniz.</p>
+    <p>Aşağıdaki form üzerinden bize mesaj gönderebilirsiniz.</p>
 
     <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
 
-        <!-- Web3Forms access key -->
         <input type="hidden" name="access_key" value="670b8b87-4ae7-4744-b7cb-8c970ad49124">
 
-        <label for="name">Adınız:</label>
-        <input type="text" id="name" name="name" required placeholder="Adınız">
+        <label for="name">Adınız</label>
+        <input type="text" id="name" name="name" required placeholder="Adınızı yazın">
 
-        <label for="email">E-posta:</label>
+        <label for="email">E-posta</label>
         <input type="email" id="email" name="email" required placeholder="E-posta adresiniz">
 
-        <label for="message">Mesajınız:</label>
-        <textarea id="message" name="message" required placeholder="Mesajınızı yazın..." rows="5"></textarea>
+        <label for="message">Mesajınız</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Mesajınızı yazın..."></textarea>
 
         <button type="submit">Gönder</button>
     </form>
