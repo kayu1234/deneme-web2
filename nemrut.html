@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nemrut Dağı — Adıyaman Tarihi</title>
+
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 
   <style>
-    /* --- Mobil uyumlu düzen --- */
-
+    /* İçerik grid yapısı */
     .detail-grid {
       display: grid;
       grid-template-columns: 1fr 320px;
@@ -17,21 +17,15 @@
       align-items: start;
     }
 
-    /* Sağdaki kutuyu mobilde alta al */
     @media (max-width: 900px) {
       .detail-grid {
         grid-template-columns: 1fr;
       }
-      aside {
-        order: 99;
-        width: 100% !important;
-      }
+      aside { order: 99; }
     }
 
-    /* Pratik bilgiler taşma düzeltme */
     .no-overflow {
       overflow-wrap: break-word;
-      word-wrap: break-word;
       word-break: break-word;
     }
   </style>
@@ -39,29 +33,21 @@
 
 <body>
 
-<!-- Sabit bilgi kutusu -->
-<div class="site-info" id="school-message">
-  Bu site, Kahta Anadolu Lisesi öğrencileri tarafından yapılmıştır.
-  <span class="close-msg" id="close-message">&times;</span>
-</div>
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner container">
+    <a href="index.html" class="brand-text" style="color:white; font-size:1.2rem; font-weight:700;">
+      Adıyaman Tarihi
+    </a>
 
-<!-- Aç/Kapat oku -->
-<div class="reopen-arrow" id="reopen-arrow">&#9650;</div>
+    <button class="mobile-toggle">☰</button>
 
-<!-- Google Maps butonu -->
-<a class="map-btn" href="https://www.google.com/maps/place/Nemrut+Da%C4%9F%C4%B1/@37.9806725,38.7395966,18z/data=!3m1!4b1!4m6!3m5!1s0x4075ff1780b7aec9:0x31abab7733e1fa45!8m2!3d37.9807788!4d38.7407995!16s%2Fm%2F0v0j6bx?entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
-  Google Maps'te Aç
-</a>
-
-<header>
-  <div class="container header-container">
-    <h1>Adıyaman Tarihi</h1>
-    <nav id="navbar">
+    <nav class="main-nav" id="navbar">
       <ul>
         <li><a href="index.html">Anasayfa</a></li>
         <li><a href="yerler.html">Gezilecek Yerler</a></li>
         <li><a href="proje.html">Projeler</a></li>
-        <li><a href="iletisi.html">İletişim</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
       </ul>
     </nav>
   </div>
@@ -69,212 +55,122 @@
 
 <main class="container" style="padding:40px 0;">
 
+  <!-- HERO -->
   <section class="detail-hero" style="text-align:center; margin-bottom:30px;">
     <img src="images/nemrut.jpg" alt="Nemrut Dağı"
       style="width:100%; max-height:420px; object-fit:cover; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.15);">
-    <h2 style="margin-top:18px; color:#0f2c4c;">Nemrut Dağı</h2>
+
+    <h2 style="margin-top:18px; color:var(--navy); font-size:2rem;">Nemrut Dağı</h2>
+
     <p style="max-width:900px; margin:10px auto 0; color:#333; line-height:1.6;">
-      Kommagene Krallığı’nın anıtsal mezar kompleksi; dev heykeller, kral tapınakları ve eşsiz gün doğumu manzaraları ile UNESCO Dünya Mirası alanı.
+      Kommagene Krallığı’nın anıtsal mezar kompleksi; dev heykeller, tapınaklar ve eşsiz gün doğumu manzaralarıyla UNESCO Dünya Mirası.
     </p>
   </section>
 
-  <!-- Yeni düzenli grid -->
+  <!-- GRID YAPI -->
   <section class="detail-grid">
 
-    <!-- Sol içerik -->
+    <!-- SOL TARAF -->
     <div class="no-overflow">
+
       <article>
-        <h3 style="color:#0f2c4c;">Tarihçe</h3>
-        <p style="color:#333; line-height:1.6;">
-          <p> Türkiye’nin güzellikleriyle süslenmiş bir yakasında, Adıyaman ilinin Kahta ilçesinde bulunan Nemrut Dağı adeta bir açık hava tarih yolculuğudur. 2150 metreye yükselen bu dağ, Toros sıralı dağlarının özgün bir güzelliğine sahiptir. Dağın doruğuna çıktıkça Kommagene Krallığı’nın izleri belirginleşir; devasa heykeller, güneşin doğuşu ve batışıyla eşi benzeri görülmeyen bir manzara sunar. Size de bunu keyifle izlemek kalır.</p>
-        <p>Binlerce yıldır güneşin doğuşunu ve batışını 2150 metre yükseklikten izleyen gizemli dev heykellerin mahiyeti ve onların yaratıcısı olan Kommagene uygarlığının tarihçesine gelin hep birlikte dalalım. Nemrut Dağı, Kommagene Krallığı’nın M.Ö. 1. yüzyılda hüküm sürmüş olan Kral I. Antiochos tarafından yaptırılmış, Helenistik Çağa tarihlenen anıtsal bir kutsal yerleşkedir.</p>
-        <p>Kommagene Krallığı, farklı kültürlerin birleşiminden oluşmuş benzersiz bir uygarlıktır. Helen, Pers ve Anadolu geleneklerini bir araya getiren bu krallık, özellikle Kral I. Antiochos zamanında altın dönemlerini yaşamıştır. Antiochos, hem siyasi gücünü ve otoritesini hem de tanrısal kökenine olan inancını vurgulamak için Nemrut Dağı’nı bir anıt alanı haline getirmiştir. Bu durum, Kommagene’nin kültürel çeşitliliğini ve devletin kendine özgü ideolojisini ortaya koymuştur.</p>
-        <p>Nemrut Dağı’nın en çarpıcı unsurlarından biri, tepede yer alan devasa ve göz alıcı tümülüslerdir. Yaklaşık 50 metre yüksekliğe ve 150 metre çapında olan bu yığılmış tepe, I. Kral Antiochos’un mezarını gizlemeyi amaçlamıştır. Tümülüsün içindeki mezara ulaşmak amacıyla herhangi bir kazı çalışması yapılmamaktadır, çünkü taş kütlesi o kadar yoğundur ki herhangi bir kazı faaliyeti yapıya zarar verebilir.</p>
-        <p>Tümülüsü çevreleyen doğu, batı ve kuzey terasları ise dev tanrı heykelleri, kabartmalar ve sunak alanlarıyla birlikte bütünsel bir kutsal yerleşke oluşturur. Heykeller ve dini sembolizm açısından Nemrut’taki dev heykeller, tanrılarla I. Antiochos’u eş seviyede gösteren benzersiz bir simgesel dile sahiptir. Her bir heykelin yaklaşık 8–10 metre yüksekliğinde olduğu ve tanrı-kral birlikteliğini temsil ettiği bilinmektedir.</p>
-        <p>Figürlere örnek olarak şunlar verilebilir:
+        <h3 style="color:var(--navy);">Tarihçe</h3>
 
-Zeus – Oromasdes
+        <p>Türkiye’nin güzellikleriyle süslenmiş bir yakasında, Adıyaman ilinin Kahta ilçesinde bulunan Nemrut Dağı adeta bir açık hava tarih yolculuğudur. 2150 metreye yükselen bu dağ, Toros sıralı dağlarının özgün bir güzelliğine sahiptir.</p>
 
-Herakles – Artagnes
+        <p>Binlerce yıldır güneşin doğuşunu ve batışını izleyen gizemli dev heykeller Kommagene uygarlığına aittir. Dağın zirvesindeki anıtsal alan, Kommagene Kralı I. Antiochos tarafından M.Ö. 1. yüzyılda yaptırılmıştır.</p>
 
-Apollon – Mithras
+        <p>Kommagene Krallığı, Pers, Helen ve Anadolu kültürlerini birleştiren eşsiz bir uygarlıktır. Antiochos, hem siyasi gücünü hem de tanrısal kökenine olan inancını vurgulamak için Nemrut’u kutsal anıt alanına dönüştürmüştür.</p>
 
-Kommagene Tanrıçası
+        <p>Zirvede yer alan tümülüs yaklaşık 50 metre yüksekliğinde ve 150 metre çapındadır. Mezar odasına ulaşmak için kazı yapılmamaktadır çünkü taş kütlesi son derece yoğundur.</p>
 
-Son olarak da Kral I. Antiochos’un kendisi</p>
-          <!DOCTYPE html>
+        <p>Teraslarda bulunan heykeller 8–10 metre yüksekliğindedir ve kral-tanrı birlikteliğini temsil eder.</p>
 
-<!DOCTYPE html>
-
-<html lang="tr">
-
-<body>
-
-<!-- Sabit bilgi kutusu -->
-
-<div class="site-info" id="school-message">
-  Bu site, Kahta Anadolu Lisesi öğrencileri tarafından yapılmıştır.
-  <span class="close-msg" id="close-message">&times;</span>
-</div>
-
-<!-- Aç/Kapat oku -->
-
-<div class="reopen-arrow" id="reopen-arrow">&#9650;</div>
-
-
-
-<main>
-  <h2>Sin Ammar ve Nemrut’un Hikayesi</h2>
-
-  <article>
-    <p>Gelin, size Sin Ammar ile Nemrut’un hikâyesini﻿ anlatayım. Bu, sadece taşlarla yapılmış bir sarayın değil, iki insanın kaderinin nasıl çarpıştığının hikâyesi.</p>
-
-```
-<p>Bir zamanlar Nemrut adında güçlü ve hırslı bir hükümdar yaşardı. Kimsenin dokunamayacağı bir saray isterdi. “Benim adım bu dünyada silinmeyecek,” derdi. İstekleri büyüdükçe, etrafındakiler ona doğruları söyleyemez oldu.</p>
-
-<p>Bir gün genç bir mimardan söz ettiler: Sin Ammar﻿. Sessiz, ağırbaşlı ama aklı keskin bir bıçak gibiydi. Nemrut sarayın yapımı için onu çağırdığında, Sin Ammar gözlerini sarayın yapılacağı dağa çevirdi ve sadece şunu dedi:</p>
-
-<p>“Bu saray yalnız taşlarla değil, zamanın kendisiyle uyumlu olmalı.”</p>
-
-<p>Ayı, güneşi, rüzgârın yönünü izledi. Haftalarca çalıştı, geceleri küçük kum saatine bakarak planlar çizdi.</p>
-
-<p>Nemrut sarayın yükselişini izledikçe hem hayran kaldı hem de garip bir huzursuzluk kapladı. “Bu adam benden daha çok mu anılacak?” diye düşündü.</p>
-
-<p>Saray bittiğinde Sin Ammar kum saatini krala verdi:</p>
-
-<p>“Bu saat kırk günde bir çevrilmezse, saray zamanına yenilir. Zaman dengesi korunmazsa, yapı ayakta duramaz.”</p>
-
-<p>Nemrut öfkesini saklamaya çalıştı. Kibir ile korku aynı yüzü gösterirmiş; o yüzün esiri oldu. Sin Ammar’ın bilgisi onu rahatsız etti. “Yarın beni geçer, halk onun adını benimkinden çok anmaya başlar,” diye düşündü.</p>
-
-<p>Ve o gece, sarayın en yüksek terasına Sin Ammar’ı çağırttı. Ay ışığı taşları beyazlatıyordu.</p>
-
-<p>Sin Ammar, Nemrut’un gözlerindeki kararı gördü ama geri adım atmadı:</p>
-
-<p>“Beni öldürsen de zaman bildiğini yapacak. Sana düşen bunu kabul etmek.”</p>
-
-<p>Nemrut’un kıskançlığı ve korkusu hiddete dönüştü. Bir işaret verdi.</p>
-
-<p>Sin Ammar terastan aşağı itildi. Düşerken kum saati yere çarpıp kırıldı, gecenin sessizliğini yırttı.</p>
-
-<p>Kırk gün geçti, kimse kum saatini doldurmadı. Nemrut unuttu, belki de görmezden geldi.</p>
-
-<p>Kırkıncı gece saray uğultuyla sarsıldı. Teraslar çatladı, duvarlar yarıldı, sütunlar çöktü.</p>
-
-<p>Nemrut şaşırdı, ama herkes aynı şeyi söyledi:</p>
-
-<p>“Sin Ammar haklıydı. Zaman kralın karşısına dikildi.”</p>
-
-<p>O günden sonra insanlar sarayın yıkılışını değil, bilgenin sessiz uyarısını hatırladı.</p>
-
-<p>Ve hikâye böyle kaldı: İnsanı yıkan taş değil, kibirdir. İnsanı yaşatan ise bilginin arkasındaki hikmettir.</p>
-```
-
-  </article>
-
-</main>
-
-
-
-
-
-<!-- Sabit bilgi kutusu -->
-
-<div class="site-info" id="school-message">
-  Bu site, Kahta Anadolu Lisesi öğrencileri tarafından yapılmıştır.
-  <span class="close-msg" id="close-message">&times;</span>
-</div>
-
-<!-- Aç/Kapat oku -->
-
-<div class="reopen-arrow" id="reopen-arrow">&#9650;</div>
-
-
-
-
-</body>
-</html>
-
-
-        <h4 style="color:#0f2c4c; margin-top:20px;">Açıklamalar / Öne Çıkan Noktalar</h4>
-        <ul style="color:#333; line-height:1.6;">
-          <li><strong>Rakım:</strong> 2.150 m.</li>
-          <li><strong>Heykeller:</strong> Kral ve tanrılara ait dev taş başlar.</li>
-          <li><strong>Görünürlük:</strong> En iyi gün doğumu.</li>
-          <li><strong>Koruma:</strong> Arkeolojik koruma devam ediyor.</li>
-        </ul>
-
-        <h4 style="color:#0f2c4c; margin-top:20px;">Pratik Bilgiler</h4>
-        <ul style="color:#333; line-height:1.6;">
-          <li>Kahta’dan araçla ~1 saat.</li>
-          <li>Giriş saatlerini kontrol edin.</li>
-          <li>Sabah çok soğuk olabilir — kalın giyinin.</li>
+        <h4 style="color:var(--navy); margin-top:20px;">Heykeller</h4>
+        <ul style="line-height:1.6; color:#333;">
+          <li>Zeus – Oromasdes</li>
+          <li>Herakles – Artagnes</li>
+          <li>Apollon – Mithras</li>
+          <li>Kommagene Tanrıçası</li>
+          <li>Kral I. Antiochos</li>
         </ul>
       </article>
 
-      <article style="margin-top:26px;">
-        <h3 style="color:#0f2c4c;">Sıkça Sorulan Sorular (SSS)</h3>
+      <!-- HİKAYE -->
+      <article style="margin-top:40px;">
+        <h3 style="color:var(--navy);">Sin Ammar & Nemrut’un Hikâyesi</h3>
 
-        <details>
-          <summary style="cursor:pointer; padding:10px 0; font-weight:600; color:#0f2c4c;">
-            Nemrut’a en kolay nasıl ulaşırım?
-          </summary>
-          <div style="padding:8px 0; color:#333;">
-            Adıyaman veya Kahta’dan araç/tur ile ulaşım mümkündür.
-          </div>
-        </details>
+        <p>Gelin, size Sin Ammar ile Nemrut’un hikâyesini anlatayım. Bu, yalnızca taşlarla yapılmış bir sarayın değil; iki insanın kaderinin çarpışmasının hikâyesidir.</p>
 
-        <details>
-          <summary style="cursor:pointer; padding:10px 0; font-weight:600; color:#0f2c4c;">
-            Gün doğumu için ne zaman gitmeliyim?
-          </summary>
-          <div style="padding:8px 0; color:#333;">
-            En az 30–45 dakika erken varılmalı.
-          </div>
-        </details>
+        <p>Nemrut güçlü, hırslı bir hükümdardı. Adının asırlar boyunca silinmeyeceği bir saray isterdi. Bir gün genç bir mimar olan Sin Ammar’dan haber aldı. Sessiz, ağırbaşlı ama keskin zekâlı biriydi.</p>
 
-        <details>
-          <summary style="cursor:pointer; padding:10px 0; font-weight:600; color:#0f2c4c;">
-            Rehber bulabilir miyim?
-          </summary>
-          <div style="padding:8px 0; color:#333;">
-            Evet, yerel rehberler mevcut.
-          </div>
-        </details>
+        <p>Saray tamamlandığında Sin Ammar ona bir kum saati verdi:</p>
+        <p><em>“Bu saat kırk günde bir çevrilmezse saray çöker. Zamanı durduramazsın.”</em></p>
 
+        <p>Nemrut’un kıskançlığı arttı. Sin Ammar'ın insanların hafızasında kendi adını geçme ihtimali onu korkuttu ve sarayın tepesinde Sin Ammar’ı öldürttü.</p>
+
+        <p>Kırk gün sonra saray çatlamaya başladı. Kimse kum saatini çevirmediği için Nemrut’un sarayı çöktü.</p>
+
+        <p>O günden itibaren insanlar sarayın yıkılışını değil, bilgenin uyarısını hatırladı:  
+        <strong>“İnsanı yıkan taş değil, kibirdir.”</strong></p>
       </article>
+
+      <!-- BİLGİLER -->
+      <article style="margin-top:30px;">
+        <h4 style="color:var(--navy);">Pratik Bilgiler</h4>
+        <ul style="line-height:1.6; color:#333;">
+          <li>Rakım: 2.150 m</li>
+          <li>Kahta’dan araçla yaklaşık 1 saat</li>
+          <li>Gün doğumu için erken gidilmesi önerilir</li>
+          <li>Sıcaklık sabah çok düşük olabilir</li>
+        </ul>
+
+        <h4 style="color:var(--navy); margin-top:20px;">Sıkça Sorulan Sorular</h4>
+
+        <details>
+          <summary>Nemrut’a nasıl gidilir?</summary>
+          <p>Kahta veya Adıyaman’dan araç ya da turlar ile ulaşılabilir.</p>
+        </details>
+
+        <details>
+          <summary>Gün doğumu için kaçta gitmeliyim?</summary>
+          <p>En az 30–45 dakika erken varmalısınız.</p>
+        </details>
+
+        <details>
+          <summary>Rehber mevcut mu?</summary>
+          <p>Evet, bölgede profesyonel rehberler bulunmaktadır.</p>
+        </details>
+      </article>
+
     </div>
 
-    <!-- Sağ kolon — Artık sadece alta inecek kutu -->
-    <aside style="background:#fff; border-radius:12px; padding:18px; box-shadow:0 8px 20px rgba(0,0,0,0.06); width:100%;">
-      <h4 style="margin-top:0; color:#0f2c4c;">Hızlı Bilgiler</h4>
-      <p><strong>En iyi zaman:</strong> İlkbahar & sonbahar.</p>
-      <p><strong>İhtiyaç:</strong> Su, yürüyüş ayakkabısı.</p>
-      <p><strong>Giriş:</strong> Ücretli.</p>
-      <a href="yerler.html" class="btn" style="display:inline-block; margin-top:10px;">Geri - Gezilecek Yerler</a>
+    <!-- SAĞ KUTU -->
+    <aside class="panel-card">
+      <h4 style="color:var(--navy); margin-top:0;">Hızlı Bilgiler</h4>
+
+      <p><strong>En iyi zaman:</strong> İlkbahar & Sonbahar</p>
+      <p><strong>Giriş:</strong> Ücretli</p>
+      <p><strong>İhtiyaç:</strong> Su, iyi bir ayakkabı</p>
+
+      <a href="yerler.html" class="btn small" style="margin-top:12px;">← Geri Dön</a>
     </aside>
 
   </section>
 </main>
 
-<footer>
-  <div class="container footer-container">
-    <p>&copy; 2025 Adıyaman Tarihi | Tüm Hakları Saklıdır</p>
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© 2025 Adıyaman Tarihi</p>
+
+    <div class="footer-links">
+      <a href="index.html">Ana Sayfa</a>
+      <a href="yerler.html">Gezilecek Yerler</a>
+      <a href="proje.html">Projeler</a>
+    </div>
   </div>
 </footer>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
