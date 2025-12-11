@@ -1,1 +1,121 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Karakuş Tümülüsü — Adıyaman Tarihi</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+
+  <style>
+    .detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 28px;
+    }
+    @media (max-width: 900px) {
+      .detail-grid { grid-template-columns: 1fr; }
+      aside { order: 99; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container header-container">
+    <h1>Adıyaman Tarihi</h1>
+    <nav id="navbar">
+      <ul>
+        <li><a href="index.html">Anasayfa</a></li>
+        <li><a href="yerler.html">Gezilecek Yerler</a></li>
+        <li><a href="projeler.html">Projeler</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container" style="padding:40px 0;">
+
+  <!-- HERO -->
+  <section class="detail-hero" style="text-align:center; margin-bottom:30px;">
+    <img src="images/karakus.jpg" alt="Karakuş Tümülüsü"
+      style="width:100%; max-height:420px; object-fit:cover; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.15);">
+    <h2 style="margin-top:18px; color:#0f2c4c;">Karakuş Tümülüsü</h2>
+    <p style="max-width:900px; margin:10px auto 0; color:#444; line-height:1.6;">
+      Kommagene kraliyet ailesi kadınlarına adanmış bir anıt mezar olan Karakuş Tümülüsü, sütunları ve kartal kabartmasıyla tanınır.
+    </p>
+  </section>
+
+  <section class="detail-grid">
+
+    <!-- SOL İÇERİK -->
+    <div>
+      <article>
+
+        <h3 style="color:#0f2c4c;">Tarihçe</h3>
+        <p style="line-height:1.6;">
+          Karakuş Tümülüsü, Kommagene Kralı II. Mithridates tarafından annesi Isias, kız kardeşi Laodike ve diğer aile üyeleri için yaptırılmış bir anıt mezardır.
+        </p>
+
+        <p style="line-height:1.6;">
+          Tümülüs çevresinde üç yüksek sütun bulunur. Bunların en ünlüsü, üzerinde büyük bir kartal figürü taşıyan sütundur.
+          “Karakuş” adı da buradan gelir.
+        </p>
+
+        <p style="line-height:1.6;">
+          Bölgede yapılan arkeolojik araştırmalar, tümülüsün içinin antik dönemde yağmalandığını göstermektedir.
+          Ancak sütunlar ve kabartmalar bugün bile etkileyici bir manzaraya sahiptir.
+        </p>
+
+        <h4 style="color:#0f2c4c; margin-top:20px;">Öne Çıkan Noktalar</h4>
+        <ul style="line-height:1.6;">
+          <li><strong>Kartallı sütun:</strong> Kommagene sembolizminde önemli yer.</li>
+          <li><strong>Anıt mezar:</strong> Kraliyet kadınlarına ithaf.</li>
+          <li><strong>Tümülüs yapısı:</strong> 21 metre yüksekliğinde.</li>
+        </ul>
+
+        <h4 style="color:#0f2c4c; margin-top:20px;">Ziyaret Bilgileri</h4>
+        <ul style="line-height:1.6;">
+          <li>Nemrut yolu üzerinde kolayca görülür.</li>
+          <li>Rüzgârlı bölgelerde dikkatli olun.</li>
+          <li>Fotoğraf için en iyi zaman: Gün batımı.</li>
+        </ul>
+
+        <h3 style="color:#0f2c4c; margin-top:26px;">Sıkça Sorulan Sorular</h3>
+
+        <details>
+          <summary style="font-weight:600; color:#0f2c4c;">Neden “Karakuş” deniyor?</summary>
+          <p style="padding:8px 0;">Kartallı sütun nedeniyle halk arasında bu isim verilmiştir.</p>
+        </details>
+
+        <details>
+          <summary style="font-weight:600; color:#0f2c4c;">Tümülüsün içi gezilebilir mi?</summary>
+          <p style="padding:8px 0;">Hayır, iç alan arkeolojik koruma altındadır.</p>
+        </details>
+
+      </article>
+    </div>
+
+    <!-- SAĞ PANEL -->
+    <aside style="background:#fff; padding:18px; border-radius:12px; box-shadow:var(--card-shadow);">
+      <h4 style="color:#0f2c4c;">Hızlı Bilgiler</h4>
+      <p><strong>Konum:</strong> Kahta yolu</p>
+      <p><strong>Yapı türü:</strong> Tümülüs – anıt mezar</p>
+      <a href="yerler.html" class="btn" style="margin-top:10px;">Geri - Gezilecek Yerler</a>
+    </aside>
+
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-container">
+    <p>© 2025 Adıyaman Tarihi | Tüm Hakları Saklıdır</p>
+  </div>
+</footer>
+
+</body>
+</html>
 
