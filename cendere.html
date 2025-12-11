@@ -4,197 +4,172 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Cendere Köprüsü — Adıyaman Tarihi</title>
+
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
+
+  <style>
+    .detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 30px;
+      align-items: start;
+    }
+
+    @media (max-width: 900px) {
+      .detail-grid {
+        grid-template-columns: 1fr;
+      }
+      aside { order: 99; }
+    }
+
+    .no-overflow {
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+  </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner container">
 
-<!-- Google Maps butonu -->
-<a class="map-btn" href="https://www.google.com/maps/place/Cendere+K%C3%B6pr%C3%BCs%C3%BC/@37.9329143,38.6059149,17z/data=!3m1!4b1!4m6!3m5!1s0x15335686cb161a4f:0x2224afbf47f2e8ff!8m2!3d37.9329143!4d38.6084898!16zL20vMDNydDEw?entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
-    Google Maps'te Aç
-</a>
+    <a href="index.html" class="brand-text" style="color:white; font-size:1.2rem; font-weight:700;">
+      Adıyaman Tarihi
+    </a>
 
-<header>
-  <div class="container header-container">
-    <h1>Adıyaman Tarihi</h1>
-    <nav id="navbar">
+    <button class="mobile-toggle">☰</button>
+
+    <nav class="main-nav" id="navbar">
       <ul>
         <li><a href="index.html">Anasayfa</a></li>
         <li><a href="yerler.html">Gezilecek Yerler</a></li>
         <li><a href="proje.html">Projeler</a></li>
-        <li><a href="iletisi.html">İletişim</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
       </ul>
     </nav>
+
   </div>
 </header>
 
 <main class="container" style="padding:40px 0;">
 
+  <!-- HERO BÖLÜMÜ -->
   <section class="detail-hero" style="text-align:center; margin-bottom:30px;">
     <img src="images/cendere.jpg" alt="Cendere Köprüsü"
       style="width:100%; max-height:420px; object-fit:cover; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.15);">
-    <h2 style="margin-top:18px; color:#0f2c4c;">Cendere Köprüsü</h2>
+
+    <h2 style="margin-top:18px; color:var(--navy);">Cendere Köprüsü</h2>
+
     <p style="max-width:900px; margin:10px auto 0; color:#333; line-height:1.6;">
-      Roma dönemi köprüsü; taş kemerleriyle dikkat çeker. Bölgenin antik ulaşım ağlarındaki önemli yapı taşlarından biridir.
+      Roma döneminin en etkileyici taş köprülerinden biri olan Cendere Köprüsü, antik yol ağının önemli bir parçası olarak iki bin yıldır ayakta durmaktadır.
     </p>
   </section>
 
-  <!-- GRID: Mobilde tek kolon, PC'de iki kolon -->
+  <!-- GRID YAPI -->
   <section class="detail-grid">
 
-    <!-- Sol içerik -->
-    <div>
+    <!-- SOL İÇERİK -->
+    <div class="no-overflow">
       <article>
-        <h3 style="color:#0f2c4c;">Tarihçe</h3>
-        <p style="color:#333; line-height:1.6;">
-         <p>Adıyaman’ın dağlık coğrafyasında, sarp kayalıkların arasından kendine yol açan Cendere Çayı, bölgenin en eski doğal geçitlerinden birini oluşturur. Bugün bu geçidin hemen üzerinde duran Cendere Köprüsü, yaklaşık iki bin yıldır yalnızca bir vadiyi birbirine bağlamıyor; aynı zamanda Roma İmparatorluğu’nun Anadolu’daki varlığının, mühendisliğinin ve politik gücünün somut bir hatırası olarak yaşamaya devam ediyor. Köprünün en dikkat çekici yönü, hem bir mühendislik ürünü olarak kusursuzluğu hem de taşıdığı tarihsel anlam katmanlarının yoğunluğudur. Bu metin, Cendere Köprüsü’nü yalnızca bir “köprü” olarak değil, bir medeniyet belgesi olarak ele almaktadır.
 
-Cendere Vadisi, antik dönemden itibaren Kuzey Mezopotamya ile Anadolu’nun iç kesimleri arasında doğal bir geçiş hattı niteliği taşıyordu. Bölge, Kommagene Krallığı döneminde de önemini korumuş; Nemrut Dağı, Arsameia, Karakuş Tümülüsü gibi yapılarla kutsal bir siyasi–kültürel merkez hâline gelmişti. Bu nedenle Roma’nın MÖ 72’de Kommagene’yi ilhak etmesinden sonra bölgeye yatırım yapılması şaşırtıcı değildir. Sınır güvenliğinin sağlanması, askeri birliklerin hareketliliğinin artırılması ve kentler arası ticaretin düzenlenmesi Roma’nın temel öncelikleri arasındaydı.
+        <h3 style="color:var(--navy);">Tarihçe</h3>
 
-Cendere Köprüsü bu çerçevede değerlendirildiğinde “sıradan bir geçiş yapısı” olmaktan tamamen çıkar; bölgenin çok daha eski yollarını düzenleyen, onları Roma nizamına katan bir eklem noktası hâline gelir.
+        <p>Cendere Vadisi, antik çağlardan itibaren Kuzey Mezopotamya ile Anadolu’nun iç kesimleri arasında doğal bir geçit görevi görmüştür. Roma’nın Kommagene Krallığı’nı ilhak etmesinden sonra bölgenin askeri ve ticari önemi daha da artmıştır.</p>
 
-Köprünün kesin inşa tarihi üzerinde tam bir görüş birliği olmasa da MS 198–200 yılları arası güvenilir bir dönem olarak kabul edilir. Bu dönem, Roma tahtında Septimius Severus’un bulunduğu, Doğu eyaletlerinde askeri ve idari yapılanmanın güçlendirildiği yıllardır.
+        <p>Cendere Köprüsü’nün yaklaşık MS 198–200 yılları arasında, Roma İmparatoru Septimius Severus döneminde inşa edildiği kabul edilmektedir. Köprü yalnızca bir mühendislik harikası değil, aynı zamanda dönemin politik mesajlarını da taşıyan bir anıttır.</p>
 
-Roma’nın doğu lejyonlarının burada aktif olduğu bilinmektedir. Bu nedenle Cendere Köprüsü’nün bir “imar faaliyeti” olmaktan çok, askeri lojistik projesi olarak tasarlandığı anlaşılmaktadır. Taşların işçiliğindeki özen, kemerin kusursuz geometrisi ve köprünün ulaşımı sağladığı hat, Roma mühendislik geleneğinin bölgede ne kadar güçlü uygulandığını açıkça gösterir.
+        <p>Köprünün girişlerinde bulunan dört sütun ise şu kişilere adanmıştır:</p>
 
-Köprünün en çarpıcı yönlerinden biri, girişlerinde yer alan dört sütundur. Her biri Korint düzeninde işlenmiş olan bu sütunlar, sıradan bir süsleme olmaktan çok daha fazlasıdır. Üzerlerindeki Latince yazıtlar, köprünün kime ithaf edildiğini gösterirken aynı zamanda Roma’nın Doğu’daki siyasi mesajını da taşır.
-
-Sütunlar sırasıyla:</p>
-        <p>İmparator Septimius Severus
-
-Eşi Julia Domna
-
-Oğulları Caracalla
-
-Oğulları Geta
-
-adına dikilmiştir.</p>
-        <p>Burada dikkat çekici olan, Julia Domna’nın Suriye kökenli bir aileden geliyor oluşudur. Roma’nın doğudaki halklarla ilişkisini sembolize eden en önemli figürlerden biridir. Onun isminin köprüde yer alması, Roma’nın bu coğrafyaya yalnızca askeri güç olarak değil, kültürel bir birlik mesajıyla da yaklaşmak istediğinin göstergesidir.
-
-Geta’nın Silinmiş Adı: Tarih ile İktidarın Çatışması
-
-MS 212’de, imparatorluk ailesi içinde trajik bir olay yaşandı. Kardeşi Caracalla tarafından öldürülen Geta’nın adı, Roma Senatosu kararıyla bütün resmi kayıtlardan silindi. Bu uygulamaya “damnatio memoriae” — kişinin hatırasına devlet eliyle lanet getirilmesi — adı verilir.
-
-Cendere Köprüsü’ndeki sütunlarda da Geta’nın adının kazınmış olduğu görülür. Bu durum, antik dünyanın politik kararlarının Anadolu’daki taş yapılara kadar yansıdığını gösteren ender örneklerden biridir. Bugün bu silinti izi, köprünün yalnızca mimari değil aynı zamanda politik bir belge olduğunu hatırlatır.
-
-Cendere Köprüsü’nün mimarisi, Roma taş köprü geleneğinin Anadolu’daki en iyi korunmuş örneklerinden biridir.</p>
-
-        <p> 1. Tek büyük kemer
-
-Köprünün ana gövdesi, yaklaşık 34 metreyi aşan tek bir büyük kemerden oluşur. Bu kemer, hem geniş açıklığı hem de günümüze kadar ayakta kalmış yapısal bütünlüğüyle dikkat çeker.</p>
-        <p>2. Kullanılan taş malzeme
-
-Bölgede bulunan sert kalker taşları özel olarak işlenmiş, yüzeyleri düzgün hâle getirilmiş ve arka arkaya kilitlenir biçimde yerleştirilmiştir. Taşlar arasındaki yerleşim, modern restorasyonlarda bile nadiren görülen bir ustalığa işaret eder.</p>
-        <p>3. Köprünün ölçüleri
-
-Toplam uzunluk: Yaklaşık 120 m
-
-Genişlik: Yaklaşık 7 m
-
-Yükseklik: Su seviyesine göre değişmekle birlikte 20 metreye yaklaşır
-
-Tek kemerin açıklığı: Roma köprüleri içinde dikkat çeken büyük açıklıklardan biri
-
-Bu ölçüler köprüyü, yalnızca bölgesel bir geçiş hattı değil, Roma’nın “emperyal ölçekli” projelerinden biri hâline getirir.</p>
-        <p>5. Bölgesel Bağlam ve Köprünün Kültürel Rolü
-
-Cendere Köprüsü’nü anlamak için onu çevresindeki yapı ve yerleşimlerle birlikte düşünmek gerekir. Köprü, Nemrut Dağı’na giden güzergâh üzerinde yer alır ve bölgedeki kutsal merkezleri birbirine bağlayan antik yol sisteminin parçasıdır.
-
-Bu anlamda köprü:
-
-Kommagene’nin kutsal alanlarını
-
-Roma’nın askeri üslerini
-
-Vadi boyunca ilerleyen ticaret yollarını
-
-bir araya getiren bir ara noktadır. Yani hem uygarlıkları hem de kültürleri birbirine ekleyen bir “kültürel köprü” olarak da değerlendirilebilir.</p>
-        <p>VI. Restorasyon ve Günümüzdeki Durumu
-
-yüzyılın sonlarında köprü üzerinde çeşitli onarım çalışmaları yapılmış, özellikle araç trafiğine kapatılmasıyla birlikte yapı üzerindeki yük azaltılmıştır. Yakınında modern bir köprü inşa edilerek eski yapının korunması sağlanmıştır. Bugün Cendere Köprüsü, Nemrut Dağı Milli Parkı sınırları içinde yer alan en önemli duraklardan biridir.
-
-Hem yerli hem de yabancı araştırmacılar için köprü, hâlâ çözülmeyi bekleyen birçok mimari ve epigrafik ayrıntı barındırır. Geta’nın silinmiş adı, sütun dizisinin orijinal planı, taş ustalarının kullandığı teknikler ve köprünün ilk kullanım dönemine dair birçok veri, araştırmacılar tarafından hâlâ incelenmektedir.</p>
-        <p>Neden Cendere Köprüsü Bu Kadar Önemli?
-
-Cendere Köprüsü’nü değerli kılan şey, yalnızca iki kıyıyı birleştiren bir taş kemer olması değildir. Bu yapı:
-
-Roma’nın Anadolu’daki en ileri mühendislik uygulamalarından biridir.
-
-Taş sütunlar ve kitabeler, imparatorluk politikalarının en somut örneklerindendir.
-
-Doğal coğrafya ile mimarinin kusursuz uyum içinde şekillendiği nadir yapılardandır.
-
-Kommagene ve Roma kültürlerinin kesişim noktasında yer alır.
-
-Taşları, hem insan emeğinin hem de tarihin karanlık olaylarının izlerini taşır.
-
-Bugün köprünün üzerinde yürüyen herkes yalnızca bir vadiyi geçmez; iki bin yıl önceki bir imparatorluğun nefesini, taş yontan bir ustanın el izini, bir ailenin siyasal trajedisini ve bir coğrafyanın kadim hafızasını da adımlamış olur.</p>
-        
-
-        <h4 style="color:#0f2c4c; margin-top:20px;">Açıklamalar / Öne Çıkan Noktalar</h4>
-        <ul style="color:#333; line-height:1.6;">
-          <li><strong>Uzunluk:</strong> Yaklaşık 120 m.</li>
-          <li><strong>Kemerler:</strong> Taş kemerli mimari</li>
-          <li><strong>Koruma:</strong> Tarihi yapı koruma altındadır</li>
+        <ul style="line-height:1.6;">
+          <li>İmparator Septimius Severus</li>
+          <li>Eşi Julia Domna</li>
+          <li>Oğulları Caracalla</li>
+          <li>Oğulları Geta (ismi sonradan kazınmıştır)</li>
         </ul>
 
-        <h4 style="color:#0f2c4c; margin-top:20px;">Ulaşım ve Ziyaret</h4>
-        <ul style="color:#333; line-height:1.6;">
-          <li>Adıyaman merkezinden ~20 dakika.</li>
-          <li>Genellikle ücretsizdir.</li>
+        <p>Geta’nın adının taşlardan kazınmış olması, Roma’da uygulanan <em>damnatio memoriae</em> (hafızadan silme cezası) uygulamasının en çarpıcı örneklerinden biridir.</p>
+
+        <h3 style="color:var(--navy); margin-top:25px;">Mimari Yapı</h3>
+
+        <p>Köprü, Roma taş köprü mimarisinin Anadolu’daki en sağlam örneklerindendir:</p>
+
+        <ul style="line-height:1.6;">
+          <li><strong>Tek büyük kemer:</strong> 34 metreyi aşan etkileyici bir açıklık.</li>
+          <li><strong>Uzunluk:</strong> Yaklaşık 120 metre.</li>
+          <li><strong>Genişlik:</strong> 7 metre.</li>
+          <li><strong>Yükseklik:</strong> Yaklaşık 20 metre.</li>
+        </ul>
+
+        <p>Bölgede bulunan sert kalker taşlarının kusursuz işlenmesi, köprünün Roma mühendisliğinin zirve örneklerinden biri olduğunu kanıtlar.</p>
+
+        <h3 style="color:var(--navy); margin-top:25px;">Kültürel Rolü</h3>
+
+        <p>Köprü yalnızca bir ulaşım hattı değildir; Kommagene’nin kutsal merkezlerini, Roma’nın askeri noktalarını ve antik ticaret yollarını birbirine bağlayan kültürel bir köprü görevi görmüştür.</p>
+
+        <p>Bugün Cendere Köprüsü, Nemrut Dağı Milli Parkı güzergâhının en önemli duraklarından biri olarak tarihin izlerini taşımaya devam etmektedir.</p>
+
+        <h4 style="color:var(--navy); margin-top:25px;">Öne Çıkan Noktalar</h4>
+        <ul style="line-height:1.6;">
+          <li><strong>Uzunluk:</strong> 120 m</li>
+          <li><strong>Mimari:</strong> Tek kemerli Roma köprüsü</li>
+          <li><strong>Durum:</strong> Koruma altında, araç trafiğine kapalı</li>
+        </ul>
+
+        <h4 style="color:var(--navy); margin-top:25px;">Ulaşım ve Ziyaret</h4>
+        <ul style="line-height:1.6;">
+          <li>Adıyaman merkezden yaklaşık 20 dakika.</li>
+          <li>Ziyaret genellikle ücretsizdir.</li>
         </ul>
       </article>
 
-      <article style="margin-top:26px;">
-        <h3 style="color:#0f2c4c;">Sıkça Sorulan Sorular (SSS)</h3>
+      <!-- SSS -->
+      <article style="margin-top:30px;">
+        <h3 style="color:var(--navy);">Sıkça Sorulan Sorular</h3>
 
         <details>
-          <summary style="cursor:pointer; padding:10px 0; font-weight:600; color:#0f2c4c;">
-            Köprüye yürüyerek ulaşılabilir mi?
-          </summary>
-          <div style="padding:8px 0; color:#333;">
-            Yakın noktadan yürüyerek ulaşım mümkündür.
-          </div>
+          <summary>Köprüye yürüyerek ulaşılabilir mi?</summary>
+          <p>Yakın park alanından kısa bir yürüyüş ile ulaşılabilir.</p>
         </details>
 
         <details>
-          <summary style="cursor:pointer; padding:10px 0; font-weight:600; color:#0f2c4c;">
-            Fotoğraf için en uygun zaman nedir?
-          </summary>
-          <div style="padding:8px 0; color:#333;">
-            Sabah ve akşam saatleri idealdir.
-          </div>
+          <summary>Fotoğraf için en uygun zaman nedir?</summary>
+          <p>Gün doğumu ve gün batımı saatleri oldukça etkileyicidir.</p>
         </details>
 
         <details>
-          <summary style="cursor:pointer; padding:10px 0; font-weight:600; color:#0f2c4c;">
-            Ziyaret ücreti var mı?
-          </summary>
-          <div style="padding:8px 0; color:#333;">
-            Genelde hayır.
-          </div>
+          <summary>Ziyaret ücreti var mı?</summary>
+          <p>Genellikle hayır. Bölge ücretsiz şekilde gezilebilmektedir.</p>
         </details>
-
       </article>
     </div>
 
-    <!-- Sağdaki alan mobilde alta geçiyor -->
-    <aside class="detail-aside">
-      <h4 style="margin-top:0; color:#0f2c4c;">Hızlı Bilgiler</h4>
-      <p><strong>En iyi zaman:</strong> İlkbahar & sonbahar.</p>
-      <p><strong>Gerekli:</strong> Su, yürüyüş ayakkabısı.</p>
-      <a href="yerler.html" class="btn" style="display:inline-block; margin-top:10px;">Geri - Gezilecek Yerler</a>
+    <!-- SAĞ KUTU -->
+    <aside class="panel-card">
+      <h4 style="color:var(--navy); margin-top:0;">Hızlı Bilgiler</h4>
+      <p><strong>En iyi zaman:</strong> İlkbahar & Sonbahar</p>
+      <p><strong>Gerekli:</strong> Su, yürüyüş ayakkabısı</p>
+
+      <a href="yerler.html" class="btn small" style="margin-top:12px;">← Geri Dön</a>
     </aside>
 
   </section>
 </main>
 
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© 2025 Adıyaman Tarihi</p>
+
+    <div class="footer-links">
+      <a href="index.html">Ana Sayfa</a>
+      <a href="yerler.html">Gezilecek Yerler</a>
+      <a href="proje.html">Projeler</a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
-
-
-
-
-
