@@ -6,58 +6,116 @@
     <title>Projeler - Adıyaman Tarihi</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+
+    <style>
+        /* -------------------------
+           Proje Sayfası Modern Stil
+        --------------------------*/
+        .projects {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .projects h2 {
+            color: var(--navy);
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .projects p {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: var(--muted);
+            line-height: 1.6;
+            font-size: 1.05rem;
+        }
+
+        .project-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: var(--white);
+            padding: 24px;
+            border-radius: var(--radius);
+            box-shadow: var(--card-shadow);
+            transition: 0.25s ease;
+            text-align: left;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .project-card h3 {
+            margin: 0 0 10px;
+            color: var(--navy);
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .project-card p {
+            margin: 0;
+            color: #444;
+            line-height: 1.5;
+        }
+    </style>
 </head>
 
 <body>
 
-  
+<header>
+    <h1>Adıyaman Gezi Rehberi</h1>
 
-    <header>
-  <h1>Adıyaman Gezi Rehberi</h1>
+    <button class="menu-toggle">☰</button>
 
-  <button class="menu-toggle">☰</button>
-
-  <nav id="navbar">
-    <ul>
-      <li><a href="index.html">Ana Sayfa</a></li>
-      <li><a href="yerler.html">Gezilecek Yerler</a></li>
-      <li><a href="iletisim.html">İletişim</a></li>
-      <li><a href="projeler.html">Projeler</a></li>
-    </ul>
-  </nav>
+    <nav id="navbar">
+        <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="yerler.html">Gezilecek Yerler</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+            <li><a href="projeler.html" class="active">Projeler</a></li>
+        </ul>
+    </nav>
 </header>
 
+<section class="projects container">
+    <h2>Projelerimiz</h2>
+    <p>Adıyaman’ın tarihi ve kültürel mirasını korumak, araştırmak ve geleceğe aktarmak için yürütülen çalışmalardan bazıları:</p>
 
-    <section class="projects container">
-        <h2>Projelerimiz</h2>
-        <p>Adıyaman’ın tarihi ve kültürel değerlerini korumak ve tanıtmak amacıyla yürüttüğümüz projeler:</p>
+    <div class="project-list">
 
-        <div class="project-list">
-
-            <div class="project-card">
-                <h3>Nemrut Dağı Araştırması</h3>
-                <p>Kommagene Krallığı’nın anıtlarını detaylı şekilde inceledik ve dijital arşiv oluşturduk.</p>
-            </div>
-
-            <div class="project-card">
-                <h3>Antik Kalıntıların Dijital Arşivi</h3>
-                <p>Tarihî eserleri dijital ortamda kayıt altına alıyor ve interaktif bir şekilde sunuyoruz.</p>
-            </div>
-
-            <div class="project-card">
-                <h3>Kültürel Etkinlikler</h3>
-                <p>Yerel halk ile birlikte tarih ve kültür temalı etkinlikler düzenliyoruz.</p>
-            </div>
-
+        <div class="project-card">
+            <h3>Nemrut Dağı Araştırmaları</h3>
+            <p>Nemrut’taki heykeller, kabartmalar ve mimari yapılar modern yöntemlerle belgelenerek dijital arşiv oluşturuldu.</p>
         </div>
-    </section>
 
-    <footer>
-        <div class="container footer-container">
-            <p>&copy; 2025 Adıyaman Tarihi | Tüm Hakları Saklıdır</p>
+        <div class="project-card">
+            <h3>Antik Yapıların Dijital Kayıt Sistemi</h3>
+            <p>Adıyaman’daki tüm tarihi eserler üç boyutlu tarama ve fotoğraf teknikleriyle kayıt altına alınıyor.</p>
         </div>
-    </footer>
+
+        <div class="project-card">
+            <h3>Kültürel Miras Eğitimleri</h3>
+            <p>Öğrenciler ve yerel halk için tarih, kültür ve arkeoloji alanında atölye çalışmaları hazırlanmaktadır.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Gezilecek Yerler Haritalandırma Projesi</h3>
+            <p>Adıyaman’daki tüm kültürel alanlar modern ve kullanıcı dostu haritalar hâline getiriliyor.</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <div class="container footer-container">
+        <p>&copy; 2025 Adıyaman Tarihi | Tüm Hakları Saklıdır</p>
+    </div>
+</footer>
 
 </body>
 </html>
-
